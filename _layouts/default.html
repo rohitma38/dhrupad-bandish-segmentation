@@ -19,8 +19,8 @@
             <a id="forkme_banner" href="{{ site.github.repository_url }}">View on GitHub</a>
           {% endif %}-->
 
-          <h1 id="project_title">Structural Segmentation of Dhrupad Vocal Bandish Audio</h1>
-          <h2 id="project_tagline">Supplementary material for poster presentation at ISMIR 2020</h2>
+          <h1 id="project_title">Transcription of Tabla Accompaniment in Hindustani Vocal Concert Audio</h1>
+          <h2 id="project_tagline">Supplementary material for MTP Stage 1 presentation</h2>
 
           {% if site.show_downloads %}
             <section id="downloads">
@@ -35,14 +35,14 @@
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
         <div id="contents_list" class="contents-list">
-          <h2>Contents<h2>
+          <!--<h2>Contents<h2>
           <ul>
             <li><a href="#ismir2020_video"><h3 style="color:blue">Video presentation at ISMIR 2020</h3></a>
             <li><a href="#audio_example_tempi"><h3 style="color:blue">Example audio from a section in a concert</h3></a>
             <li><a href="#stm_examples"><h3 style="color:blue">Examples of different surface tempo multiples</h3></a>
             <li><a href="#dhrupad_playlist"><h3 style="color:blue">More Dhrupad music on YouTube</h3></a>
             <li><a href="#model_variants"><h3 style="color:blue">Some other model architectures</h3></a>
-            <li><a href="#section_descriptions"><h3 style="color:blue">Musical description of the bandish sections</h3></a>
+            <li><a href="#section_descriptions"><h3 style="color:blue">Musical description of the bandish sections</h3></a> -->
             <!-- <li><a href="#choutal_theka_variants"><h3 style="color:blue">Changing rhythmic density within the theka</h3></a> -->
             <!-- <li><a href="#tempo-cnn"><h3 style="color:blue">Related Work – <i>tempo-cnn</i></h3></a> -->
             <!-- <li><a href="#stm-cnn"><h3 style="color:blue">Proposed Model for s.t.m. Estimation</h3></a> -->
@@ -51,246 +51,49 @@
         </div>
         <br><br><br>
 
-          <div id="" class="section_content">
-            <h2 id="ismir2020_video">Video presentation at ISMIR 2020</h2>            
-              <iframe width="560" height="315" src="https://www.youtube.com/embed/OoFv1OrNuow" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                      allowfullscreen></iframe>
-          </div>
-          <br>
-          (<a href="#contents_list">top</a>)
-          <br><br><br>
-            
-          <div id="" class="section_content">
-          <h2 id="audio_example_tempi">Example audio from a section in a concert</h2>
-          <figure>
-            <img src="media/audio_example_tempi.png"
-            alt="">
-            <figcaption>The ground truth metric tempo (m.t.), surface tempo (s.t.) and section boundary annotations for a portion of an audio in the
-            dataset.  Below are audios from the section within the big dashed blue rectangle.</figcaption>
-          </figure>
-           <br>
-
-          <!-- <div class="column"> -->
-          <figure>
-          <figcaption>Mixture</figcaption>
-          <audio
-          controls
-          src="media/example_audio_tempi_mix.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-          </audio>
-          </figure>
-
-          <figure>
-          <figcaption>Vocals</figcaption>
-          <audio
-          controls
-          src="media/example_audio_tempi_voc.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-          </audio>
-          </figure>
-          
-          <figure>
-          <figcaption>Pakhawaj</figcaption>
-          <audio
-          controls
-          src="media/example_audio_tempi_pakh.mp3">
-            Your browser does not support the
-            <code>audio</code> element.
-          </audio>
-          </figure>
-          <p>Audio source: <a href="https://musicbrainz.org/recording/178b4cf6-88e6-414d-bfbd-3d90bb368a9a">https://musicbrainz.org/recording/178b4cf6-88e6-414d-bfbd-3d90bb368a9a</a> </P>
-
-        <!-- </div> -->
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-
         <div id="" class="section_content">
-          <h2 id="stm_examples">Examples of different surface tempo multiples</h2>
-          <p> Each figure below is a spectrogram of an 8-second example (Frequency in Hz on y-axis and time in seconds on x-axis).</p>
-          <p> A dashed box (in white) of width 2.5 seconds is shown on each spectrogram to highlight the differences in onset densities between the examples. 
-          The m.t. in all the examples is between 50 and 60 BPM, so in each case, 
-          the number of strokes / syllables we expect to see within the dashed rectangle is roughly equal to twice the s.t.m. value.
-          The inset in figure (d) of width 1 second highlights the distinct nature of vocalisation at s.t.m 8. </p>
+          <h2 id="stroke_category_examples">Examples strokes from the 4 categories</h2>
           <br>
           <div class="row">
             <div class="column">
               <div class="row">
-              <img src="media/stm_examples/mix_1.png" style="width:100%">
+              <img src="media/presentation_audios/tabla-strokes/ti_2_2.png" style="width:100%">
               <figure>
-              <audio src="media/stm_examples/mix_1.wav" controls></audio>
-              <figcaption>(a) Mixture, s.t.m. = 1</figcaption>
+              <audio src="media/presentation_audios/tabla-strokes/ti_2_2.wav" controls></audio>
+              <figcaption>(a) Damped</figcaption>
               </figure>
               </div>
             </div>
             <div class="column">
               <div class="row">
-              <img src="media/stm_examples/voc_2.png" style="width:100%">
-              <audio src="media/stm_examples/voc_2.wav" controls></audio>
-              <figcaption>(b) Vocals, s.t.m. = 2</figcaption>
+              <img src="media/presentation_audios/tabla-strokes/na_2_0.png" style="width:100%">
+              <audio src="media/presentation_audios/tabla-strokes/na_2_0.wav" controls></audio>
+              <figcaption>(b) Resonant Treble</figcaption>
               </figure>
               </div>
             </div>
             <div class="column">
               <div class="row">
-              <img src="media/stm_examples/voc_4.png" style="width:100%">
-              <audio src="media/stm_examples/voc_4.wav" controls></audio>
-              <figcaption>(c) Vocals, s.t.m. = 4</figcaption>
+              <img src="media/presentation_audios/tabla-strokes/ghe_2_1.png" style="width:100%">
+              <audio src="media/presentation_audios/tabla-strokes/ghe_2_1.wav" controls></audio>
+              <figcaption>(c) Resonant Bass</figcaption>
               </figure>                
               </div>
             </div>
             <div class="column">
               <div class="row">
-              <img src="media/stm_examples/voc_8.png" style="width:100%">
-              <audio src="media/stm_examples/voc_8.wav" controls></audio>
-              <figcaption>(d) Vocals, s.t.m. = 8</figcaption>
+              <img src="media/presentation_audios/tabla-strokes/dha_2_9.png" style="width:100%">
+              <audio src="media/presentation_audios/tabla-strokes/dha_2_9.wav" controls></audio>
+              <figcaption>(d) Resonant Both</figcaption>
               </figure>                
               </div>
             </div>            
           </div>
           <br>
-          <div class="row">
-            <div class="column">
-              <div class="row">
-              <img src="media/stm_examples/pakh_2.png" style="width:100%">
-              <audio src="media/stm_examples/pakh_2.wav" controls></audio>
-              <figcaption>(e) Pakhawaj, s.t.m. = 2</figcaption>
-              </figure>                
-              </div>
-            </div>
-            <div class="column">
-              <div class="row">
-              <img src="media/stm_examples/pakh_4.png" style="width:100%">
-              <audio src="media/stm_examples/pakh_4.wav" controls></audio>
-              <figcaption>(f) Pakhawaj, s.t.m. = 4</figcaption>
-              </figure>                
-              </div>
-            </div>
-            <div class="column">
-              <div class="row">
-              <img src="media/stm_examples/pakh_8.png" style="width:100%">
-              <audio src="media/stm_examples/pakh_8.wav" controls></audio>
-              <figcaption>(g) Pakhawaj, s.t.m. = 8</figcaption>
-              </figure>                
-              </div>
-            </div>
-            <div class="column">
-              <div class="row">
-              <img src="media/stm_examples/pakh_16.png" style="width:100%">
-              <audio src="media/stm_examples/pakh_16.wav" controls></audio>
-              <figcaption>(h) Pakhawaj, s.t.m. = 16</figcaption>
-              </figure>                
-              </div>
-            </div>            
-          </div>
-          
         </div>
         <br>
-        (<a href="#contents_list">top</a>)
         <br><br><br>           
 
-        <div id="" class="section_content">
-          <h2 id="dhrupad_playlist">YouTube playlist of some select Dhrupad vocal music</h2>
-          <p>(The last couple of videos are lecture demonstrations which offer a detailed explanation of the music form)</p>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL2hQBZsVGYmv55KL_1uyXVUe9Gso00pM8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; 
-            picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-
-        <div id="" class="section_content">
-          <h2 id="model_variants">Some other model architectures that were experimented with</h2>
-          <figure>
-            <img src="media/model_variants.png">
-            <figcaption>[1] Schreiber et al, "A Single-Step Approach to Musical Tempo Estimation Using a Convolutional Neural Network", ISMIR 2018 </figcaption>
-          </figure>
-          <figure>
-            <img src="media/model_variants_results.png">
-            <figcaption> (a) - (g) Training (in blue) and validation (in orange) loss curves for the different
-              architecture variations (inset: the last 70 epochs). (h) Training and validation accuracies
-              at the minimum validation loss for each model. </figcaption>
-          </figure>
-
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-
-        <div id="" class="section_content">
-          <h2 id="section_descriptions">Musical description of the bandish sections</h2>
-          <figure>
-            <img src="media/section_descriptions.png"
-            alt="A table describing each section in a bandish">
-          </figure>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-
-        <div id="" class="section_content">
-          <h2 id="references">References</h2>
-          <ul>
-            <li> M. Clayton, Time in Indian Music: Rhythm, Metre, and Form in North Indian Rāg Performance. Oxford, England: Oxford University Press, 2000. </li>
-            <li> M. A. Rohit and P. Rao, “Structure and automatic segmentation of Dhrupad vocal bandish audio,” Unpublished technical report, arXiv:2008.00756 
-              [eess.AS],2020. </li>
-          </ul>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-          
-<!--
-        <div id="" class="section_content">
-          <h2 id="choutal_theka_variants">Changing rhythmic density within the theka</h2>
-          <figure>
-            <img src="media/choutal_theka_variants.png"
-            alt="">
-            <figcaption align="left"> The theka of Choutal, a 12 matra cycle with 6 sub-divisions of 2 matras each.
-            (a) Its basic form with 1 stroke per matra for the most part except on the last 4 matras,
-            where it is 2 per matra. (b) A variation with 4 strokes on each of the last two matras. </figcaption>
-          </figure>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-          
-        <div id="" class="section_content">
-          <h2 id="tempo-cnn">Related Work – <i>tempo-cnn</i></h2>
-          <figure>
-            <img src="media/tempo-cnn.png"
-            alt="">
-          </figure>
-        </div>
-         <br>
-        (<a href="#contents_list">top</a>)
-       <br><br><br>
-  
-        <div id="" class="section_content">
-          <h2 id="stm-cnn">Proposed Model for s.t.m. Estimation</h2>
-          <figure>
-            <img src="media/stm-cnn.png"
-            alt="">
-          </figure>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
-      
-        <div id="" class="section_content">
-          <h2 id="conf_mats">Confusion matrices for s.t.m. prediction</h2>
-          <figure>
-            <img src="media/conf_mats.png"
-            alt="">
-          </figure>
-        </div>
-        <br>
-        (<a href="#contents_list">top</a>)
-        <br><br><br>
--->          
       </section>
     </div>
       
